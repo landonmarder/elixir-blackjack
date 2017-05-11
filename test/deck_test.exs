@@ -3,7 +3,7 @@ defmodule Blackjack.DeckTest do
   alias Blackjack.Deck
 
   test "evaluates there are 52 cards in the deck" do
-    assert length(Deck.all) == 52
+    assert length(Deck.new) == 52
   end
 
   test "evaluates that the deck can shuffle" do

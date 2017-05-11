@@ -5,7 +5,7 @@ defmodule Blackjack.HandTest do
 
   test "that adding item to hand removes it from the deck" do
     hand = []
-    deck = Deck.all
+    deck = Deck.new
     size_of_deck = length(deck)
 
     {updated_hand, updated_deck} = Hand.add(hand, deck)

@@ -2,10 +2,10 @@ defmodule Blackjack.Deck do
   alias Blackjack.Card
 
   def shuffle do
-    Enum.shuffle(all())
+    Enum.shuffle(new())
   end
 
-  def all do
+  def new do
     [
       %Card{suit: :heart, rank: "A"},
       %Card{suit: :heart, rank: "2"},

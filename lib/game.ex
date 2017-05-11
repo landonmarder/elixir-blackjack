@@ -1,6 +1,7 @@
 defmodule Blackjack.Game do
   use GenServer
   alias Blackjack.Hand
+  alias Blackjack.Deck
 
   @name GAME
 
@@ -25,7 +26,7 @@ defmodule Blackjack.Game do
   ## Server Callbacks
 
   def init(:ok) do
-    deck = Blackjack.Deck.shuffle
+    deck = Deck.shuffle
 
     {player_hand, deck} = Hand.add([], deck)
     {dealer_hand, deck} = Hand.add([], deck)
